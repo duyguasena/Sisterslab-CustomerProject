@@ -30,6 +30,11 @@ public class CustomerController {
         return  customerService.getCustomerFingById(id);
     }
 
+    @PutMapping("{id}")
+    public String updateFirstName(@PathVariable Long id,@RequestBody Customer customer){
+        return customerService.updateFirstName(id,customer);
+    }
+
 
 
 }
